@@ -2,7 +2,7 @@
 
 $server_key = "SB-Mid-server-Gs-d_hxTQV2slW3BOGXkxH31";
 $is_production = false;
-$is_production = false;
+
 $aoi_url = $is_production ? 'https://app.midtrans.com/snap/v1/transactions' : 'https://app.sandbox.midtrans.com/snap/v1/transactions';
 
 
@@ -25,7 +25,7 @@ http_response_code($charge_result['http_code']);
 
 echo $charge_result['body']
 
-function chargeAPI($api_url, $server_key, $request_body) {
+function chargeAPI ($api_url, $server_key, $request_body) {
 
     $ch = curl_init();
     $curl_option = array (
