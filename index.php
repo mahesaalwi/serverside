@@ -5,8 +5,8 @@ $server_key = "SB-Mid-server-Gs-d_hxTQV2slW3BOGXkxH31";
 $is_production = false;
 
 $api_url = $is_production ? 
-  'https://app.midtrans.com/snap/v1/transactions' : 
-  'https://app.sandbox.midtrans.com/snap/v1/transactions';
+  'https://wargaonline.herokuapp.com/' : 
+  'https://wargaonline.herokuapp.com/';
 
 
 if( !strpos($_SERVER['REQUEST_URI'], '/charge') ) {
