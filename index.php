@@ -6,8 +6,8 @@ $is_production = false;
 
 $api_url = $is_production ?
  
-'Production Endpoint: https://app.midtrans.com/snap/v1/transactions':
-'Sandbox Endpoint: https://app.sandbox.midtrans.com/snap/v1/transactions';
+'https://app.midtrans.com/snap/v1/transactions':
+'https://app.sandbox.midtrans.com/snap/v1/transactions';
 
 
 if( !strpos($_SERVER['REQUEST_URI'], '/charge') ) {
