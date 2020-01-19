@@ -6,7 +6,7 @@ $is_production = false;
 
 $api_url = $is_production ?
  
-'Production Endpoint: https://app.midtrans.com/snap/v1/transactions';
+'Production Endpoint: https://app.midtrans.com/snap/v1/transactions':
 'Sandbox Endpoint: https://app.sandbox.midtrans.com/snap/v1/transactions';
 
 
