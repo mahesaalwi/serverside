@@ -11,12 +11,12 @@ $api_url = $is_production ?
 
 
 if( !strpos($_SERVER['REQUEST_URI'], '/charge') ) {
-  http_response_code(404); 
+  http_response_code(200); 
   echo "wrong path, make sure it's `/charge`"; exit();
 }
 
 if( $_SERVER['REQUEST_METHOD'] !== 'POST'){
-  http_response_code(404);
+  http_response_code(200);
   echo "Page not found or wrong HTTP request method is used"; exit();
 }
 
@@ -40,7 +40,7 @@ function chargeAPI($api_url, $server_key, $request_body){
 
 
     CURLOPT_HTTPHEADER => array(
-      'Content-Type: application/json',
+      'Content-Type: application/html',
       'Accept: application/json',
       'Authorization: Basic ' . base64_encode($server_key . ':')
     ),
