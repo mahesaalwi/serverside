@@ -21,7 +21,7 @@ if( $_SERVER['REQUEST_METHOD'] !== 'POST'){
 }
 
 $request_body = file_get_contents('php://input');
-header('Content-Type: application/html');
+header('Content-Type: application/json');
 
 $charge_result = chargeAPI($api_url, $server_key, $request_body);
 
@@ -40,7 +40,7 @@ function chargeAPI($api_url, $server_key, $request_body){
 
 
     CURLOPT_HTTPHEADER => array(
-      'Content-Type: application/html',
+      'Content-Type: application/json',
       'Accept: application/json',
       'Authorization: Basic ' . base64_encode($server_key . ':')
     ),
